@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Agent setup and configuration with IBM watsonx.ai support"""
 from beeai_framework.agents.requirement import RequirementAgent
 from beeai_framework.agents.requirement.requirements.conditional import ConditionalRequirement
 from beeai_framework.backend import ChatModel

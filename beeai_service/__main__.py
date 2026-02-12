@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 BeeAI Service - Main Entry Point
 Single unified service for WXO integration with IBM watsonx.ai
@@ -6,8 +5,6 @@ Single unified service for WXO integration with IBM watsonx.ai
 import sys
 import traceback
 from beeai_framework.errors import FrameworkError
-
-# Import from the package
 from beeai_service.config.settings import app_settings, watsonx_settings
 from beeai_service.core.agent import create_maintenance_agent
 from beeai_service.servers.wxo_server import WXOServer

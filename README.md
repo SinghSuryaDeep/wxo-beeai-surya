@@ -708,7 +708,6 @@ data: [DONE]
 
 ## 📄 License
 
-Apache License 2.0
 
 ---
 

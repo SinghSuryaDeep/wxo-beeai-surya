@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 WXO-compatible HTTP server
 Converts WXO /chat/completions format to BeeAI agent calls
@@ -10,7 +9,6 @@ from typing import List, Optional
 from fastapi import FastAPI, HTTPException, Header
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-
 from beeai_framework.agents.requirement import RequirementAgent
 from beeai_service.config.settings import app_settings
 
@@ -27,7 +25,6 @@ class ChatCompletionRequest(BaseModel):
 
 
 class WXOServer:
-    """WXO-compatible HTTP server"""
     
     def __init__(self, agent: RequirementAgent):
         self.agent = agent

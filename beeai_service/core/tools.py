@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""Tool definitions for predictive maintenance"""
 from beeai_framework.tools import tool
 
 @tool(description="Get the current city for the given vehicle ID.")
