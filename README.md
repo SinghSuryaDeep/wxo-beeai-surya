@@ -672,108 +672,6 @@ data: {"id":"chatcmpl-xxx","choices":[{"delta":{"content":"..."}}]}
 ...
 data: [DONE]
 ```
-
----
-
-## 🔧 Troubleshooting
-
-### Issue 1: Container Won't Start
-
-**Symptoms:**
-- Container exits immediately
-- Health check fails
-
-**Solution:**
-```bash
-# Check logs
-docker compose logs --tail=50
-
-# Verify .env file
-cat .env | grep WATSONX
-
-# Rebuild
-docker compose down -v
-docker compose build --no-cache
-docker compose up -d
-```
-
-### Issue 2: 401 Unauthorized (watsonx.ai)
-
-**Symptoms:**
-- `Invalid API key`
-- `Authentication failed`
-
-**Solution:**
-1. Verify API key in IBM Cloud console
-2. Check key hasn't expired
-3. Verify project ID is correct
-4. Ensure Granite model access
-
-### Issue 3: WXO Can't Call BeeAI
-
-**Symptoms:**
-- Connection timeout
-- 401 from BeeAI
-
-**Solution:**
-```bash
-# Test endpoint directly
-curl -X POST https://your-url/chat/completions \
-  -H "X-API-Key: beeai-maintenance-key-2024" \
-  -d '{"messages":[{"role":"user","content":"test"}]}'
-
-# Verify API key matches
-echo $BEEAI_API_KEY
-```
-
-### Issue 4: Langfuse Not Recording
-
-**Symptoms:**
-- Empty dashboard
-- No traces
-
-**Solution:**
-```bash
-# Verify config
-cat agents_observability/langfuse_config.yml
-
-# Re-import
-orchestrate settings observability langfuse configure \
-  --config-file=agents_observability/langfuse_config.yml
-```
-
-### Issue 5: Agent Name Mismatch
-
-**Symptoms:**
-- WXO can't find collaborator agent
-- "Agent not found" error
-
-**Solution:**
-```bash
-# List registered agents
-orchestrate agents list | grep -i beeai
-
-# Update maintenance_agent.yaml with exact name
-collaborator_agents:
-  - beeai_predictive_maintenance_agent  # Must match exactly
-```
-
-### Debug Mode
-
-Enable detailed logging:
-
-```bash
-# In .env
-BEEAI_LOG_LEVEL=DEBUG
-BEEAI_LOG_INTERMEDIATE_STEPS=true
-
-# Restart
-docker compose restart
-
-# Watch logs
-docker compose logs -f
-```
-
 ---
 
 ## 📞 Support & Resources
@@ -812,6 +710,6 @@ This project demonstrates enterprise AI integration patterns using:
 
 ---
 
-**Built with ❤️ for enterprise AI integration**
+**Built for enterprise AI integration**
 
 *Showcasing: BeeAI + watsonx.ai + Granite + Watsonx Orchestrate + Langfuse*
