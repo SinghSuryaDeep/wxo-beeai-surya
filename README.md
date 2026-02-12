@@ -446,7 +446,7 @@ Can you help me check vehicle TRUCK-22
 
 **Expected Flow:**
 
-![WXO Agent Preview](docs/5-wxo-agent-preview.png)
+![WXO Agent Preview](docs/wxo-agent-preview.png)
 
 The agent will:
 1. ✅ Call BeeAI external agent
@@ -510,7 +510,7 @@ orchestrate settings observability langfuse configure \
 
 **Langfuse Dashboard:**
 
-![Langfuse Trace](docs/4-langfuse-trace.png)
+![Langfuse Trace](docs/langfuse-trace.png)
 
 **What Gets Captured:**
 - ✅ User query
@@ -520,34 +520,6 @@ orchestrate settings observability langfuse configure \
 - ✅ Execution timing for each step
 - ✅ Total latency
 - ✅ Error traces (if any)
-
-**Example Trace Details:**
-```
-Trace ID: run_orchestrator_agent: 0d30fe250b31ad87abfd24e6ba282032
-Duration: 8.34s
-Status: ✓ Success
-
-├─ User: "Can you help me check vehicle TRUCK-22"
-│
-├─ maintenance_agent (8.34s)
-│   ├─ LangGraph (7.92s)
-│   │   └─ agent (0.39s)
-│   │       └─ ChatOpenAI (0.25s)
-│   │
-│   ├─ tools (0.01s)
-│   │   └─ chat_with_collaborator_beeai_predictive_maintenance_agent (0.00s)
-│   │
-│   └─ collaborator (7.29s)
-│       ├─ LangGraph (7.26s)
-│       │   ├─ agent_style_router (0.00s)
-│       │   ├─ agent (7.26s)
-│       │   └─ invoke_agent (7.24s)
-│       │       ├─ ChatPromptTemplate (0.00s)
-│       │       └─ beeai_predictive_maintenance_agent_1961oN (7.24s)
-│       │           └─ Response: "Vehicle TRUCK-22 is currently located..."
-│       │
-│       └─ answer (0.00s)
-```
 
 ---
 
