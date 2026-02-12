@@ -107,8 +107,7 @@ User receives: Complete maintenance plan with booking details
 - ⚡ **Low Latency**: ~200ms inference time for typical requests
 - 🔧 **Tool Calling**: Native support for function/tool invocation
 - 📏 **Context Window**: 8,192 tokens for comprehensive context understanding
-- 💰 **Cost-Effective**: ~70% cheaper than GPT-3.5 with comparable performance
-- 🔓 **Open Source**: Transparent, auditable model architecture
+- 💰 **Cost-Effective**: Cheaper than GPT-3.5 and other LLMs with comparable performance
 - 🌍 **Enterprise-Grade**: SLA guarantees, multi-region deployment, compliance-ready (GDPR, SOC2, HIPAA)
 
 ### Watsonx Orchestrate Integration
