@@ -50,7 +50,7 @@ This project demonstrates a **production-ready AI agent integration** for predic
 
 ## 🏗️ System Architecture
 
-![Architecture Diagram](docs/architecture-diagram)
+![Architecture Diagram](docs/architecture-diagram.mov)
 
 ### Data Flow
 
