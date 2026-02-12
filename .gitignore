@@ -1,10 +1,7 @@
-# ----------------------------
 # Python
-# ----------------------------
 __pycache__/
 *.py[cod]
 *.so
-*.egg
 *.egg-info/
 build/
 dist/
@@ -39,6 +36,3 @@ htmlcov/
 *.swp
 *.swo
 *~
-
-# Screen recordings
-*.mov
