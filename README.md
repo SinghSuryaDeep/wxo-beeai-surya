@@ -1,4 +1,4 @@
-# 🚗 BeeAI Predictive Maintenance Service
+# 🚗 Predictive Maintenance Automation
 
 **Enterprise AI Integration Demo: BeeAI + IBM watsonx.ai (Granite) + Watsonx Orchestrate + Langfuse**
 
@@ -32,7 +32,7 @@ This project demonstrates a **production-ready AI agent integration** for predic
 
 | Technology | Role |
 |------------|------|
-| **🤖 BeeAI Framework** | Agentic AI with deterministic tool orchestration |
+| **🤖 BeeAI Framework** | Agentic AI with tool orchestration |
 | **🧠 IBM watsonx.ai** | Enterprise LLM platform and infrastructure |
 | **💎 Granite 3.8B** | High-performance instruction-following model |
 | **🔗 Watsonx Orchestrate** | Workflow automation and agent management |
@@ -95,7 +95,7 @@ User receives: Complete maintenance plan with booking details
 
 ### BeeAI Service
 
-- 🎯 **Requirement Agent**: Enforces deterministic tool execution order
+- 🎯 **Requirement Agent**: Enforces tool execution order
 - 🔧 **Tool Collection**: 4 predictive maintenance tools (location, schedule, slots, inventory)
 - 💾 **Memory Management**: Full conversation context retention
 - 📝 **Trajectory Logging**: Complete execution tracking
