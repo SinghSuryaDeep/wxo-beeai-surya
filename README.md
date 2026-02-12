@@ -698,28 +698,10 @@ data: [DONE]
 - **Langfuse**: https://langfuse.com/docs
 - **Granite Models**: https://www.ibm.com/granite
 
-### Getting Help
-
-- **GitHub Issues**: Report bugs and request features
-- **IBM Support**: For watsonx.ai/Orchestrate issues
-- **Stack Overflow**: Tag `ibm-watsonx` or `beeai`
-
 ---
 
 ## 📄 License
 
-
----
-
-## 🙏 Acknowledgments
-
-This project demonstrates enterprise AI integration patterns using:
-
-- **IBM watsonx.ai** - Enterprise AI platform
-- **Granite Models** - High-performance open LLMs
-- **BeeAI Framework** - Agentic AI orchestration
-- **Watsonx Orchestrate** - Workflow automation
-- **Langfuse** - AI observability
 
 ---
 
