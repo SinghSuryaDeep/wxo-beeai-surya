@@ -345,6 +345,12 @@ chmod +x deploy_to_code_engine.sh
 6. ✅ Set up health checks
 7. ✅ Get public URL
 
+#### View logs
+
+```bash
+ibmcloud ce app logs --name beeai-maintenance --follow
+```
+
 **Expected Output:**
 
 ![Code Engine Deployment](docs/beeai-code-engine.png)
