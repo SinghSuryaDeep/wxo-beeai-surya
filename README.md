@@ -1,6 +1,6 @@
 # 🚗 Predictive Maintenance Automation
 
-**Enterprise AI Integration Demo: BeeAI + IBM watsonx.ai (Granite) + Watsonx Orchestrate + Langfuse**
+**Enterprise AI Integration Demo: BeeAI + IBM watsonx + IBM Granite Model + Watsonx Orchestrate (Agentic Workflow) + Langfuse (Observability)**
 
 [![IBM watsonx.ai](https://img.shields.io/badge/IBM-watsonx.ai-blue)](https://www.ibm.com/watsonx)
 [![BeeAI Framework](https://img.shields.io/badge/BeeAI-Framework-green)](https://github.com/i-am-bee/bee-agent-framework)
