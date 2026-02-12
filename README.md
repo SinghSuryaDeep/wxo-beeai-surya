@@ -347,7 +347,7 @@ chmod +x deploy_to_code_engine.sh
 
 **Expected Output:**
 
-![Code Engine Logs](docs/6-code-engine-logs.png)
+![Code Engine Deployment](docs/beeai-code-engine.png)
 
 ### Step 3: Get Application URL
 
@@ -413,17 +413,17 @@ This imports:
 
 ### Step 2: Register BeeAI as External Agent
 
-#### Option A: WXO UI (Recommended)
+#### WXO UI 
 
 1. **Navigate to**: Watsonx Orchestrate → Agents → Import agent
 
-![Import Agent Type](docs/1-wxo-import-agent-type.png)
+![Import Agent Type](docs/wxo-import-agent-type.png)
 
 2. **Select**: External agent → Next
 
 3. **Configure Agent Details**:
 
-![Agent Details](docs/2-wxo-agent-details.png)
+![Agent Details](docs/beeai-wxo-agent-details.png)
 
 | Field | Value |
 |-------|-------|
@@ -435,44 +435,6 @@ This imports:
 | **Description** | An AI-powered predictive maintenance agent for fleet vehicles that analyzes maintenance requirements and provides real-time operational insights, including vehicle location tracking, driver availability and schedules, dealership service slot availability, and parts inventory verification. |
 
 4. **Import agent** → Done
-
-#### Option B: CLI
-
-```bash
-# Example (if supported by your WXO version)
-orchestrate agents import -f wxo_agents/maintenance_agent.yaml
-```
-
-### Step 3: Update Maintenance Agent Configuration
-
-Edit `wxo_agents/maintenance_agent.yaml`:
-
-```yaml
-spec_version: v1
-kind: native
-name: maintenance_agent
-llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
-style: default
-
-description: >
-  Intelligent maintenance coordinator with BeeAI integration
-
-instructions: >
-  You coordinate vehicle maintenance using BeeAI and workflows.
-  
-  WORKFLOW:
-  1. For comprehensive analysis: Delegate to @beeai_predictive_maintenance_agent
-  2. Then execute predictive_maintenance_flow
-  3. Synthesize both results into actionable recommendations
-
-tools:
-  - predictive_maintenance_flow
-
-collaborator_agents:
-  - beeai_predictive_maintenance_agent  # Must match registered name
-```
-
-⚠️ **Important**: The `collaborator_agents` name must **exactly match** the registered agent name in WXO.
 
 ### Step 4: Test Integration
 
