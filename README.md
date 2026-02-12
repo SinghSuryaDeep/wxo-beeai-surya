@@ -247,7 +247,7 @@ chmod +x setup_local.sh
 
 **Expected Output:**
 
-![BeeAI Local Startup](docs/3-beeai-local-startup.png)
+![BeeAI Local Startup](docs/beeai-local-startup.png)
 
 You should see:
 - ✅ Container built and started
