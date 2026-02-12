@@ -417,12 +417,6 @@ First, activate your Watsonx Orchestrate environment:
 ```bash
 orchestrate env activate <your_environment_name> --api-key <your_api_key>
 ```
-
-**Example:**
-```bash
-orchestrate env activate EY_workflow_wxo --api-key azE6dXNyXzM0NWZjM2UyLTM5YmMtM2IzZC1iYjc5LTZjZWQ3ZGVhZWRlZjpwTkRoYlJxdHNpNTBRV2FveUdnUElCRFI4VlJ3SUxadEg3M0lxSUdzckpvPTpES0Ur
-```
-
 ⚠️ **Note**: Replace `<your_environment_name>` and `<your_api_key>` with your actual WXO environment credentials.
 
 ### Step 2: Import All Components
