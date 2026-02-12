@@ -22,7 +22,6 @@
 - [Observability with Langfuse](#-observability-with-langfuse)
 - [Testing](#-testing)
 - [API Reference](#-api-reference)
-- [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -412,8 +411,21 @@ ibmcloud ce app delete --name beeai-maintenance --force
 
 ## 🔗 Watsonx Orchestrate Integration
 
-### Step 1: Import All Components
+### Step 1: Authenticate with WXO Environment
 
+First, activate your Watsonx Orchestrate environment:
+```bash
+orchestrate env activate <your_environment_name> --api-key <your_api_key>
+```
+
+**Example:**
+```bash
+orchestrate env activate EY_workflow_wxo --api-key azE6dXNyXzM0NWZjM2UyLTM5YmMtM2IzZC1iYjc5LTZjZWQ3ZGVhZWRlZjpwTkRoYlJxdHNpNTBRV2FveUdnUElCRFI4VlJ3SUxadEg3M0lxSUdzckpvPTpES0Ur
+```
+
+⚠️ **Note**: Replace `<your_environment_name>` and `<your_api_key>` with your actual WXO environment credentials.
+
+### Step 2: Import All Components
 ```bash
 cd scripts
 chmod +x import_all.sh
@@ -426,9 +438,9 @@ This imports:
 - ✅ 2 Agents (maintenance_agent, scheduler_agent)
 - ✅ Langfuse observability configuration
 
-### Step 2: Register BeeAI as External Agent
+### Step 3: Register BeeAI as External Agent
 
-#### WXO UI 
+#### WXO UI
 
 1. **Navigate to**: Watsonx Orchestrate → Agents → Import agent
 
@@ -454,7 +466,6 @@ This imports:
 ### Step 4: Test Integration
 
 **In WXO Chat:**
-
 ```
 Can you help me check vehicle TRUCK-22
 ```
