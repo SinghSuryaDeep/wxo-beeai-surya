@@ -20,8 +20,6 @@ def main():
         print("🚀 BeeAI Predictive Maintenance Service")
         print("=" * 60)
         print(f"🤖 Model: {app_settings.llm_model}")
-        print(f"🔗 watsonx.ai URL: {watsonx_settings.url}")
-        print(f"📦 Project ID: {watsonx_settings.project_id}")
         print(f"🔌 Server: {app_settings.wxo_host}:{app_settings.wxo_port}")
         print("=" * 60)
         

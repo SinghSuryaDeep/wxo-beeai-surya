@@ -15,8 +15,6 @@ def create_maintenance_agent() -> RequirementAgent:
     """Create and configure the predictive maintenance agent with IBM watsonx.ai"""
     
     print(f"  📊 Loading model: {app_settings.llm_model}")
-    print(f"  🔗 watsonx.ai endpoint: {watsonx_settings.url}")
-    print(f"  📦 Project ID: {watsonx_settings.project_id}")
     print(f"  🛠️ Tools loaded: {len(ALL_TOOLS)}")
     
     # Initialize LLM with watsonx.ai
